@@ -1,18 +1,19 @@
-ALTER TABLE POST
-  ALTER COLUMN create_date SET DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE `blog_simple_db`.`post` 
+CHANGE COLUMN `create_date` `create_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ;
+
 
 -- Users
 -- password in plaintext: "password"
-INSERT INTO USER (user_id, password, email, username, name, last_name, active)
+INSERT INTO ACCOUNTUSER (user_id, password, email, username, name, last_name, active)
 VALUES
   (1, '$2a$06$OAPObzhRdRXBCbk7Hj/ot.jY3zPwR8n7/mfLtKIgTzdJa4.6TwsIm', 'user@mail.com', 'user', 'Name', 'Surname',
    1);
 -- password in plaintext: "password"
-INSERT INTO USER (user_id, password, email, username, name, last_name, active)
+INSERT INTO ACCOUNTUSER (user_id, password, email, username, name, last_name, active)
 VALUES
   (2, '$2a$06$OAPObzhRdRXBCbk7Hj/ot.jY3zPwR8n7/mfLtKIgTzdJa4.6TwsIm', 'johndoe@gmail.com', 'johndoe', 'John', 'Doe', 1);
 -- password in plaintext: "password"
-INSERT INTO USER (user_id, password, email, username, name, last_name, active)
+INSERT INTO ACCOUNTUSER (user_id, password, email, username, name, last_name, active)
 VALUES (3, '$2a$06$OAPObzhRdRXBCbk7Hj/ot.jY3zPwR8n7/mfLtKIgTzdJa4.6TwsIm', 'ana@mail.com', 'ana', 'Ana', 'Surname', 1);
 
 -- Roles
